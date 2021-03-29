@@ -4,7 +4,7 @@ import java.awt.Color;
 import java.awt.Graphics2D;
 
 
-public class Rectangle {
+public class rectangle {
 	
 	private static Color color; 
 	private static  int x = 200;
@@ -33,7 +33,7 @@ public class Rectangle {
 	}
 
 	public void setWidth(int width) {
-		Rectangle.width = width;
+		rectangle.width = width;
 	}
 
 	public static int getHeight() {
@@ -41,7 +41,7 @@ public class Rectangle {
 	}
 
 	public void setHeight(int height) {
-		Rectangle.height = height;
+		rectangle.height = height;
 	}
 
 	public static boolean contains(double mx, double my){
@@ -59,7 +59,7 @@ public class Rectangle {
 
 	}
 	
-	public Rectangle() {
+	public rectangle() {
            
 		color = new Color((float)Math.random(), (float)Math.random(), (float)Math.random());     
 	}
