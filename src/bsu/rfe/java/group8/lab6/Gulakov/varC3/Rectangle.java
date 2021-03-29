@@ -1,0 +1,74 @@
+package bsu.rfe.java.group8.lab6.Gulakov.varC3;
+
+import java.awt.Color;
+import java.awt.Graphics2D;
+
+
+public class Rectangle {
+	
+	private static Color color; 
+	private static  int x = 200;
+	private static int y = 200;
+	private static int width = x;
+	private static int height = y;
+	
+	public static  int getX() {
+		return x;
+	}
+
+	public static void setX(int X) {
+		x = X;
+	}
+
+	public static int getY() {
+		return y;
+	}
+
+	public static void setY(int Y) {
+		y = Y;
+	}
+
+	public static int getWidth() {
+		return width;
+	}
+
+	public void setWidth(int width) {
+		Rectangle.width = width;
+	}
+
+	public static int getHeight() {
+		return height;
+	}
+
+	public void setHeight(int height) {
+		Rectangle.height = height;
+	}
+
+	public static boolean contains(double mx, double my){
+		boolean mark = false;
+		if(mx >= x && my >= y)
+			if(my <= height+y && mx <= width+x)
+				mark = true;
+		return mark;
+		
+		}
+	
+	public static void setPos(double Mx, double My){
+		setX((int) Mx);
+		setY((int) My);
+
+	}
+	
+	public Rectangle() {
+           
+		color = new Color((float)Math.random(), (float)Math.random(), (float)Math.random());     
+	}
+
+	public static void paint(Graphics2D canvas) { 
+		
+		System.out.println(x);
+		color = new Color(0, 215, 255);
+		canvas.setColor(color);
+		canvas.fillRect(x, y, width, height);
+		} 
+}

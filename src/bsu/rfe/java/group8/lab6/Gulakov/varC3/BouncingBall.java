@@ -43,34 +43,34 @@ public class BouncingBall implements Runnable {
 		@SuppressWarnings("deprecation")
 		public void run() {
 		try {
-		
 			while(true) {
-			field.canMove(this);
-			if (x + speedX <= radius) {
-			speedX = -speedX;
-			x = radius;
-			} else
 				
-			if (x + speedX >= field.getWidth() - radius) {
-			 speedX = -speedX;
-			 x=new Double(field.getWidth()-radius).intValue();
-			} else
-				
-			if (y + speedY <= radius) {
-			speedY = -speedY;
-			y = radius;
-			} else
-				
-			if (y + speedY >= field.getHeight() - radius) {
-			 speedY = -speedY;
-			 y=new Double(field.getHeight()-radius).intValue();
-			} else {
-		
-				x += speedX;
-				y += speedY;
-			}
+				field.canMove(this);
+				if (x + speedX <= radius) {
+				speedX = -speedX;
+				x = radius;
+				} else
+					
+				if (x + speedX >= field.getWidth() - radius) {
+				 speedX = -speedX;
+				 x=new Double(field.getWidth()-radius).intValue();
+				} else
+					
+				if (y + speedY <= radius) {
+				speedY = -speedY;
+				y = radius;
+				} else
+					
+				if (y + speedY >= field.getHeight() - radius) {
+				 speedY = -speedY;
+				 y=new Double(field.getHeight()-radius).intValue();
+				} else {
 			
-			Thread.sleep(16-speed);
+					x += speedX;
+					y += speedY;
+				}
+				
+				Thread.sleep(16-speed);
 			}
 			
 			} catch (InterruptedException ex) {
